@@ -1,5 +1,5 @@
-function solution(input) {
-  const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+function sol(input) {
+  const day = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
   const dates = Object.keys(input)
     .sort()
@@ -33,7 +33,7 @@ function solution(input) {
     }
   }
 
-  const result = {
+  const res = {
     Mon: 0,
     Tue: 0,
     Wed: 0,
@@ -44,11 +44,11 @@ function solution(input) {
   };
 
   filled.forEach(({ date, value }) => {
-    const weekday = dayNames[date.getDay()];
-    result[weekday] += Math.round(value);
+    const weekday = day[date.getDay()];
+    res[weekday] += Math.round(value);
   });
 
-  return result;
+  return res;
 }
 
-module.exports = solution;
+module.exports = sol;
