@@ -1,4 +1,4 @@
-const solution = require("./sol");
+const sol = require("./sol");
 
 // Given Test Case 1
 const input1 = {
@@ -23,7 +23,7 @@ const expected1 = {
 };
 
 console.assert(
-  JSON.stringify(solution(input1)) === JSON.stringify(expected1),
+  JSON.stringify(sol(input1)) === JSON.stringify(expected1),
   "Test Case 1 Failed"
 );
 
@@ -47,7 +47,7 @@ const expected2 = {
 };
 
 console.assert(
-  JSON.stringify(solution(input2)) === JSON.stringify(expected2),
+  JSON.stringify(sol(input2)) === JSON.stringify(expected2),
   "Test Case 2 Failed"
 );
 
@@ -56,7 +56,7 @@ const input3 = {
   "2020-01-01": 10,
 };
 
-const output3 = solution(input3);
+const output3 = sol(input3);
 console.log("Case 1 Output:", output3);
 
 // Case 2 — Non-consecutive months
@@ -65,7 +65,7 @@ const input4 = {
   "2020-01-10": 15,
 };
 
-console.log("Case 2 Output:", solution(input4));
+console.log("Case 2 Output:", sol(input4));
 
 // Case 3 — Negative + Positive values interpolation
 const input5 = {
@@ -73,7 +73,7 @@ const input5 = {
   "2020-02-03": 10,
 };
 
-console.log("Case 3 Output:", solution(input5));
+console.log("Case 3 Output:", sol(input5));
 
 // Case 4 — Multiple missing days
 const input6 = {
@@ -81,6 +81,6 @@ const input6 = {
   "2020-03-08": 9,
 };
 
-console.log("Case 4 Output:", solution(input6));
+console.log("Case 4 Output:", sol(input6));
 
 console.log("All tests completed ✅");
